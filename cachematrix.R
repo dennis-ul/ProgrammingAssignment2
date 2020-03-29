@@ -74,8 +74,5 @@ cacheSolve <- function(makeCacheMatrix.object, ...)
 }
 
 
-ls(environment(makeCacheMatrix))
-value(ls(environment(specia.object$getinverse))[3])
-
 
 
