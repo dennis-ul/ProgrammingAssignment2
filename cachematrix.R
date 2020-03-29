@@ -13,19 +13,19 @@
 
 ### The Function makeCacheMatrix creates a special object from type list with four elements which are functions:
 
-# 1th element: setmatrix(): When running the function makeCacheMatrix or cachesolve the function set.matrix ist not used
+# 1th element: setmatrix(): When running the function makeCacheMatrix or cachesolve the function set.matrix() ist not used
 # because the matrix which should be inverted is given as an argument to the function. However, if one wants to cache 
 # and invert a different matrix, one can use makeCacheMatrix.object$setmatrix(NEWMATRIX) without running makeCacheMatrix
-# again. setmatrix() defines the NEWMATRIX as wenn as it sets the inverse to null.
+# again. setmatrix() defines the NEWMATRIX and sets the inverse to NULL
 
 # 2nd element: getmatrix(): Retrieves the matrix M which is stored in the environment of the special matrix object 
 # (makeCacheMatrix.object).
 
-# 3rd element: setinverse(): Takes the argument "I" which is the inverse of the matrix which should be inverted and 
+# 3rd element: setinverse(): Needs the argument "I" which is the inverse of the matrix which should be inverted and 
 # assigns it to the variable "Inverse" in the parent environtment of setinverse() and therefore stores it of the 
 # environtment of the special matrix object (makeCacheMatrix.object).
 
-# 4th element: getinverse: Retrieves the Value of the variable Inverse out of the environment of the special matrix
+# 4th element: getinverse(): Retrieves the Value of the variable Inverse out of the environment of the special matrix
 # object (makeCacheMatrix.object).
 
 makeCacheMatrix <- function(M = matrix() )
@@ -54,7 +54,7 @@ makeCacheMatrix <- function(M = matrix() )
 # the value is returned from the cache (environment of the special object). Otherwise
 # the function calls getmatrix() to retrieve the matrix to be inverted and stores it in the local variable "data".
 # Afterwards, the inverse of "data" is calculated and stored to the environment of the special matrix object by calling
-# setinverse(loca.Inverse).
+# setinverse(local.Inverse).
 
 
 
